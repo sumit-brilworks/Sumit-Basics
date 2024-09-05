@@ -1,0 +1,121 @@
+<!-- Create a form with fields for name, email, and password. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task - 1</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        background-color: #252525;
+        color: white;
+        font-family: serif;
+        min-height: 100vh;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .heading {
+        text-align: center;
+      }
+      form {
+        background-color: #2c2a2a;
+        padding: 30px;
+        margin: 10px;
+        width: 400px;
+      }
+      .box {
+        display: grid;
+      }
+      label {
+        font-size: 19px;
+        padding: 10px 0px;
+      }
+      input {
+        padding: 8px;
+        border-radius: 5px;
+        outline: none;
+      }
+      button {
+        padding: 5px;
+        background-color: rgb(184, 43, 184);
+        color: white;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 0px auto;
+      }
+      button:hover {
+        background-color: aqua;
+        color: black;
+        cursor: pointer;
+      }
+      .buttonBox {
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Form Handling</h1>
+      <form id="registerForm" action="#">
+        <div class="box">
+          <label for="firstname">First Name</label>
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="Enter your first name"
+          />
+        </div>
+        <div class="box">
+          <label for="lastname">Last Name</label>
+          <input
+            type="text"
+            id="lastname"
+            name="lastname"
+            placeholder="Enter your first name"
+          />
+        </div>
+        <div class="box">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+          />
+        </div>
+        <div class="box">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            autocomplete="new-password"
+            placeholder="Enter your password"
+          />
+        </div>
+        <div class="box">
+          <label for="password">Confirm Password</label>
+          <input
+            name="confirmPassword"
+            type="password"
+            id="confirmPassword"
+            placeholder="Confirm your password"
+          />
+        </div>
+        <div class="buttonBox">
+          <button type="submit">Sign UP</button>
+        </div>
+      </form>
+    </div>
+    <script src="Task-1.js"></script>
+  </body>
+</html>
