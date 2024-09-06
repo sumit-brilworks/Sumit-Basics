@@ -1,0 +1,55 @@
+<!-- Implement a switch statement to handle different cases for a variable. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task - 3</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        color: white;
+        justify-content: center;
+        padding-top: 50px;
+        background-color: #252525;
+        min-height: 100vh;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="todayDay">Today Day :</h1>
+    </div>
+    <script>
+      switch (new Date().getDay()) {
+        case 0:
+          document.getElementById("todayDay").innerHTML = "Sunday";
+          break;
+        case 1:
+          document.getElementById("todayDay").innerHTML += " Monday";
+          break;
+        case 2:
+          document.getElementById("todayDay").innerHTML += " Tuesday";
+          break;
+        case 3:
+          document.getElementById("todayDay").innerHTML += " Wednesday";
+          break;
+        case 4:
+          document.getElementById("todayDay").innerHTML += " Thursday";
+          break;
+        case 5:
+          console.log(5);
+          document.getElementById("todayDay").innerHTML += " Friday";
+          break;
+        case 6:
+          document.getElementById("todayDay").innerHTML += " Saturday";
+          break;
+      }
+    </script>
+  </body>
+</html>

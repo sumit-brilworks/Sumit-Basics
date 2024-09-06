@@ -1,0 +1,36 @@
+<!-- Add a mouseover event to change the background color of a div when hovered. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task - 2</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      #box {
+        background-color: aqua;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <h1>Hover over the box to change the color</h1>
+    </div>
+    <script>
+      document.getElementById("box").addEventListener("mouseover", (e) => {
+        e.currentTarget.style.backgroundColor = "blue";
+      });
+      document.getElementById("box").addEventListener("mouseleave", (e) => {
+        e.currentTarget.style.backgroundColor = "aqua";
+      });
+    </script>
+  </body>
+</html>

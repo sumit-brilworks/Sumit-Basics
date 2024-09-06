@@ -1,0 +1,38 @@
+<!-- Create a button that changes its text when clicked. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task - 1</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        height: 100px;
+        align-items: center;
+        background-color: yellow;
+        padding: 10px;
+      }
+      button {
+        padding: 5px;
+        border-radius: 5px;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button id="colorButton">Click to change text</button>
+    </div>
+    <script>
+      document.getElementById("colorButton").addEventListener("click", (e) => {
+        e.target.innerHTML = "Text is changed";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task - 1</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        background-color: #252525;
+        min-height: 100vh;
+        color: white;
+      }
+      #addItem {
+        padding: 5px;
+        border-radius: 5px;
+      }
+      #addInputItem {
+        padding: 5px;
+        border-radius: 5px;
+      }
+      .box {
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+      }
+      button {
+        background-color: aqua;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: yellow;
+      }
+      .heading {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      #styledBox {
+        background-color: blanchedalmond;
+        padding: 10px;
+        border-radius: 10px;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3 class="heading">
+        Change the content of a paragraph dynamically using innerHTML.
+      </h3>
+      <div class="box">
+        <input type="text" id="addInputItem" placeholder="Add an Item" />
+        <button id="add" onclick="addDynamicItem()">Add Item</button>
+        <div id="content">Dynamically added Content :</div>
+      </div>
+      <br />
+
+      <hr />
+      <h3 class="heading">
+        Create a button that, when clicked, adds a new item to an unordered
+        list.
+      </h3>
+
+      <div class="box">
+        <ul id="unorderedList">
+          <li id="list1">list</li>
+          <li id="list2">list</li>
+          <li id="list3">list</li>
+          <li id="list4">list</li>
+        </ul>
+        <button id="addItem" onclick="addItem()">Add Item</button>
+      </div>
+      <br />
+      <hr />
+      <h3 class="heading">
+        Experiment with changing styles of elements using JavaScript (e.g.,
+        changing color, font size).
+      </h3>
+      <div class="box">
+        <button id="change-btn" onclick="changeColor()">Change Style</button>
+        <div id="styledBox">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam amet ab
+          doloribus fuga perferendis! Adipisci ut aperiam nulla harum officiis
+          vitae labore sapiente! Ipsa rerum voluptas ad nesciunt natus quisquam.
+        </div>
+      </div>
+    </div>
+    <script>
+      const addItem = (e) => {
+        console.log("hello");
+        const unorderedList = document.getElementById("unorderedList");
+        const element = document.createElement("li");
+        element.innerText = "new list";
+        unorderedList.append(element);
+      };
+
+      const addDynamicItem = (e) => {
+        const contentBox = document.getElementById("content");
+        const inputBox = document.getElementById("addInputItem");
+        console.log(contentBox, inputBox.value);
+        contentBox.innerHTML += inputBox.value + " ";
+      };
+      const changeColor = (e) => {
+        const box = document.getElementById("styledBox");
+        box.style.width = "300px";
+        box.style.color = "white";
+        box.style.backgroundColor = "darkblue";
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!-- Create a program that takes a user’s age and displays whether they are a child, teenager, or adult. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-1</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        color: white;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        background-color: #252525;
+        min-height: 100vh;
+        gap: 10px;
+      }
+      input {
+        padding: 10px;
+        border-radius: 10px;
+        width: 150px;
+        outline: none;
+      }
+      button {
+        padding: 10px;
+        border-radius: 10px;
+        background-color: cadetblue;
+        outline: none;
+        color: white;
+      }
+      button:hover {
+        background-color: aquamarine;
+        color: black;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>This determines whether you are a teenager, adult or a kid</h2>
+      <div class="inputBox">
+        <input
+          type="number"
+          id="age"
+          placeholder="Enter your age"
+          min="1"
+          max="100"
+        />
+        <button onclick="handleAge()">Enter</button>
+      </div>
+    </div>
+    <script>
+      const handleAge = (e) => {
+        let inputData = document.getElementById("age").value;
+        document.getElementById("age").value = "";
+        console.log(inputData);
+        if (inputData === "") alert("Enter your age");
+        if (inputData < 1) alert("Entered age is invalid");
+        if (inputData >= 1 && inputData < 13) alert("You are a child");
+        if (inputData >= 13 && inputData < 18) alert("You are a Teenager");
+        if (inputData >= 18 && inputData < 100) alert("Now, You are an Adult");
+      };
+    </script>
+  </body>
+</html>
