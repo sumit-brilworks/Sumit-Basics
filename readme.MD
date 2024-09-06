@@ -78,7 +78,7 @@
 
 - **Topic**: Defining and Calling Functions.
 - **Exercise**: Create a function that takes two numbers as parameters and returns their sum. Write another function that checks if a number is even or odd. Experiment with function expressions and arrow functions.
-- **Solution File**: [JavaScript Functions Solution](Exercise_11/task_1.js)
+- **Solution File**: [JavaScript Functions Solution](Exercise_10/task_1.js)
 
 ---
 
@@ -86,6 +86,6 @@
 
 - **Topic**: Understanding Operators and Control Flow (if, else, switch, loops).
 - **Exercise**: Create a program that takes a user's age and displays whether they are a child, teenager, or adult. Write a program that uses a loop to display numbers from 1 to 10, and implement a switch statement to handle different cases.
-- **Solution File**: [Control Flow Solution](#)
+- **Solution File**: [Control Flow Solution](Exercise_11/task_1.html)
 
 ---
