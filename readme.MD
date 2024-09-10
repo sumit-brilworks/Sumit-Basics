@@ -170,10 +170,42 @@
 
 ---
 
-### 22. Prototypes
+### 22.1 Prototypes
 
 - **Topic**: Prototypes and Prototype Chain.
 - **Exercise**: Rewrite the `Stopwatch` class using prototype inheritance.
-- **Solution File**: [Prototypes Solution](Exercise_22/Task_1.html)
+- **Solution File**: [Prototypes Solution](Exercise_22.1/Task_1.html)
+
+---
+
+### 22.2 Prototypical Inheritence
+
+- **Topic**: Super Method, Polymorphism.
+- **Exercise**: Write an example program for polymorphism
+- **Solution File**: [Prototypical Inheritence](Exercise_22.2/Task_1.js)
+
+---
+
+### 23. Classes in ES6
+
+- **Topic**: Classes.
+- **Exercise**: Create a `Stack` class that implements `push` and `pop` methods and a `count` property using ES6 classes.
+- **Solution File**: [Classes in ES6 Solution](Exercise_23/Task_1.js)
+
+---
+
+### 24. OOPS using Classes
+
+- **Topic**: Extend and Super.
+- **Exercise**: Create a class called the stack that implements push / pop methods and count property using `ES6 classses`.
+- **Solution File**: [OOP with Classes Solution](Exercise_24/Task_1.js)
+
+---
+
+### 25. Modules in ES6
+
+- **Topic**: Import and Export.
+- **Exercise**: Create a class called the stack that implements push / pop methods and count property using ES6 classses.
+- **Solution File**: [Modules Solution](Exercise_25/Task_1.js)
 
 ---
