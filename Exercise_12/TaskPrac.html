@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <style>
+      button {
+        padding: 8px;
+        background-color: blueviolet;
+        color: white;
+        border-radius: 5px;
+        outline: none;
+      }
+      button:hover {
+        scale: 110%;
+        cursor: pointer;
+      }
+      dialog {
+        border: none;
+        border-radius: 10px;
+        padding: 50px;
+      }
+      input {
+        padding: 8px;
+        border-radius: 5px;
+        outline: none;
+      }
+      .mainContainer {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+      }
+      .box {
+        background-color: #252525;
+        color: white;
+        padding: 20px;
+        border-radius: 5px;
+      }
+      ul {
+        list-style-type: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <dialog id="addDialog">
+      <form method="dialog" id="addTaskUsingForm">
+        <label for="taskName">Task Name:</label>
+        <input autofocus type="text" id="name" name="name" required />
+        <br /><br />
+
+        <label for="duration">Duration:</label>
+        <input type="text" id="duration" name="duration" required />
+        <br /><br />
+        <div style="display: flex; justify-content: space-around">
+          <button id="addTaskButton" type="submit" onclick="addTask()">
+            Submit
+          </button>
+
+          <button type="button" id="cancelAddDialog">Cancel</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="editDialog">
+      <form method="dialog">
+        <label for="taskName">Task Name:</label>
+        <input type="text" id="name" name="name" required />
+        <br /><br />
+
+        <label for="duration">Duration:</label>
+        <input type="text" id="duration" name="duration" required />
+        <br /><br />
+
+        <button id="editTaskbtn" name="editTaskbtn" type="submit">
+          Update
+        </button>
+
+        <button type="button" id="cancelEditDialog">Cancel</button>
+      </form>
+    </dialog>
+    <div class="mainContainer">
+      <button id="openAddDialog">Add Task</button>
+      <div class="container">
+        <input
+          type="search"
+          name="searchTasks"
+          id="searchTasks"
+          placeholder="Search the tasks ..."
+        />
+        <button onclick="searchByName()">search</button>
+      </div>
+      <div id="searchID"></div>
+      <div id="tasksList"></div>
+    </div>
+
+    <script>
+      let tasks = [];
+
+      const addTask = (e) => {
+        console.log(e);
+        console.log("Add task is working");
+        const name = document.getElementById("name").value;
+        const duration = document.getElementById("duration").value;
+        tasks.unshift({ name, duration });
+        console.log(name, duration);
+        document.getElementById("addDialog").close();
+        document.getElementById("name").value = "";
+        document.getElementById("duration").value = "";
+        console.log(tasks);
+        renderTasks();
+      };
+      const openAddDialogbtn = document.getElementById("openAddDialog");
+      const editDialog = document.getElementById("editDialog");
+      const tasksList = document.getElementById("tasksList");
+      openAddDialogbtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        console.log("hi");
+        document.getElementById("addDialog").showModal();
+      });
+
+      //   function for searching the tasks
+      const searchByName = () => {
+        const searchedVal = document.getElementById("searchTasks");
+
+        let indexPlace = document.getElementById("searchID");
+        indexPlace.value = tasks.findIndex((item) => {
+          console.log(searchedVal.name, searchedVal.value);
+          return item.name === searchedVal.value;
+        });
+        if (indexPlace.value !== -1) {
+          tasks = tasks.filter((item, ind) => {
+            return ind === indexPlace.value;
+          });
+          indexPlace.innerHTML = "Element at index : " + indexPlace.value;
+          console.log(indexPlace.value);
+        }
+        renderTasks();
+      };
+
+      const renderTasks = () => {
+        if (tasksList.children.length === 0) {
+          tasksList.innerHTML = "<h1 style='color:black;'> No Tasks </h1>";
+          return;
+        }
+        tasksList.replaceChildren();
+
+        tasks.map((item, index) => {
+          const container = document.createElement("ul");
+          container.innerHTML = `<li style="margin-top:5px; margin-bottom:5px; display: flex;justify-content:center;">
+          <li style=" margin-top:5px; margin-bottom:5px;">Task Name : ${item.name}</li>
+          <li style=" margin-top:5px; margin-bottom:5px;">Duration : ${item.duration}</li>
+          <div style="display:flex; gap:10px; margin-top:5px; margin-bottom:5px;">
+          <button onclick="editTask(${index})"><i class="fas fa-edit"></i> Edit Task</button>
+          <button onclick="deleteTask(${index})"><i class="fas fa-trash"></i> Delete Task</button></div>
+      </li>`;
+          tasksList.appendChild(container);
+        });
+      };
+      const deleteTask = (index) => {
+        tasks = tasks.filter((item, i) => i !== index);
+        renderTasks();
+      };
+      const editDialogBox = document.getElementById("editDialog");
+      const editMyTask = (index, name, duration) => {
+        console.log(index, name, duration);
+        tasks[index].name = name;
+        tasks[index].duration = duration;
+        renderTasks();
+      };
+      const editTask = (index) => {
+        editDialogBox.showModal();
+        editDialog.children.item(0)["name"].value = tasks[index].name;
+        editDialog.children.item(0)["duration"].value = tasks[index].duration;
+        console.log(editDialog.children.item(0)["editTaskbtn"]);
+        document
+          .getElementById("editTaskbtn")
+          .addEventListener("click", (e) => {
+            console.log("Finally called");
+            tasks[index].name = editDialog.children.item(0)["name"].value;
+            renderTasks();
+          });
+      };
+
+      const closeBtn = document.getElementById("cancelAddDialog");
+      closeBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.getElementById("addDialog").close();
+      });
+      const closeEditBtn = document.getElementById("cancelEditDialog");
+      closeEditBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        editDialogBox.close();
+      });
+      renderTasks();
+    </script>
+  </body>
+</html>
