@@ -129,3 +129,27 @@
 - **Solution File**: [Sets and Maps Solution](Exercise_16/Task_1.js)
 
 ---
+
+### 17. Function Hoisting and Arguments
+
+- **Topic**: Understanding Function Hoisting and the `arguments` Object.
+- **Exercise**: Write two functions—one declared with a function declaration and one with a function expression—and observe hoisting behavior. Create a function that accepts a variable number of arguments and sums them.
+- **Solution File**: [Function Hoisting and Arguments Solution](Exercise_17/Task_1.js)
+
+---
+
+### 18. Rest Operator and Default Parameters
+
+- **Topic**: Using the Rest Operator and Default Parameters.
+- **Exercise**: Create a function that uses the rest operator to accept an arbitrary number of arguments and returns their sum. Write a function with a default parameter and test it by calling the function with and without arguments.
+- **Solution File**: [Rest Operator and Default Parameters Solution](#)
+
+---
+
+### 19. Try and Catch, Scope, and This Keyword
+
+- **Topic**: Error Handling, Variable Scope, and the `this` Keyword.
+- **Exercise**: Write a function that intentionally throws an error and handle it using `try` and `catch`. Experiment with variable scope. Create an object with a method that uses `this` to refer to its properties.
+- **Solution File**: [Error Handling and Scope Solution](#)
+
+---
