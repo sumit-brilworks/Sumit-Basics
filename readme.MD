@@ -142,7 +142,7 @@
 
 - **Topic**: Using the Rest Operator and Default Parameters.
 - **Exercise**: Create a function that uses the rest operator to accept an arbitrary number of arguments and returns their sum. Write a function with a default parameter and test it by calling the function with and without arguments.
-- **Solution File**: [Rest Operator and Default Parameters Solution](#)
+- **Solution File**: [Rest Operator and Default Parameters Solution](Exercise_18/Task_1.js)
 
 ---
 
@@ -150,6 +150,30 @@
 
 - **Topic**: Error Handling, Variable Scope, and the `this` Keyword.
 - **Exercise**: Write a function that intentionally throws an error and handle it using `try` and `catch`. Experiment with variable scope. Create an object with a method that uses `this` to refer to its properties.
-- **Solution File**: [Error Handling and Scope Solution](#)
+- **Solution File**: [Error Handling and Scope Solution](Exercise_19/Task_1.js)
+
+---
+
+### 20. Asynchronous Programming
+
+- **Topic**: Promises, Async/Await, `setInterval`, and `setTimeout`.
+- **Exercise**: Create a promise that resolves after 2 seconds and log a message. Use `async` and `await` to handle the promise. Experiment with `setTimeout` and `setInterval`.
+- **Solution File**: [Asynchronous Programming Solution](Exercise_20/Task_1.js)
+
+---
+
+### 21. Objects (Stopwatch Class)
+
+- **Topic**: Object, Constructor Function, Abstraction.
+- **Exercise**: Create a `Stopwatch` class with `start`, `stop`, and `duration` methods. Implement the logic to start the watch if it's not already started, stop it if running, and get the duration.
+- **Solution File**: [Stopwatch Class Solution](Exercise_21/Task_1.html)
+
+---
+
+### 22. Prototypes
+
+- **Topic**: Prototypes and Prototype Chain.
+- **Exercise**: Rewrite the `Stopwatch` class using prototype inheritance.
+- **Solution File**: [Prototypes Solution](Exercise_22/Task_1.html)
 
 ---
