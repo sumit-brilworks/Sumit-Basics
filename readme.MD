@@ -89,3 +89,43 @@
 - **Solution File**: [Control Flow Solution](Exercise_11/task_1.html)
 
 ---
+
+### 12. Array CRUD Operations
+
+- **Topic**: Basic CRUD Operations on Arrays.
+- **Exercise**: Create an array of tasks and implement functions to add, remove, update, and display tasks. Write a function that searches for a task by name and returns its index.
+- **Solution File**: [Array CRUD Operations Solution](Exercise_12/TaskPrac.html)
+
+---
+
+### 13. Sorting, Joining, and Iterating Arrays
+
+- **Topic**: Array Methods for Sorting, Joining, and Iterating.
+- **Exercise**: Create an array of numbers and sort them in ascending and descending order. Join an array of words into a single string with spaces. Iterate over an array using `forEach` and display each element.
+- **Solution File**: [Array Methods Solution](Exercise_13/Task_1.js)
+
+---
+
+### 14. Filter, Map, Reduce
+
+- **Topic**: Advanced Array Methods - Filter, Map, Reduce.
+- **Exercise**: Use `filter` to create a new array with only even numbers. Use `map` to create a new array with doubled values. Use `reduce` to find the sum of an array.
+- **Solution File**: [Filter, Map, Reduce Solution](Exercise_14/Task_1.js)
+
+---
+
+### 15. Spread Operators
+
+- **Topic**: Using Spread Operators for Arrays and Objects.
+- **Exercise**: Combine two arrays using the spread operator. Create a copy of an object and modify one of its properties without affecting the original. Use the spread operator to pass multiple arguments to a function.
+- **Solution File**: [Spread Operators Solution](Exercise_15/Task_1.js)
+
+---
+
+### 16. Sets and Maps
+
+- **Topic**: Introduction to Set and Map Data Structures.
+- **Exercise**: Create a `Set` with a list of unique numbers and demonstrate adding, deleting, and checking for values. Create a `Map` to store key-value pairs and demonstrate adding, retrieving, and deleting entries.
+- **Solution File**: [Sets and Maps Solution](Exercise_16/Task_1.js)
+
+---
